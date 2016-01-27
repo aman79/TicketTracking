@@ -1,0 +1,83 @@
+<div class="row">
+	<div class="panel panel-info">
+		<div class="panel-heading" >
+			<h2 >Ticket Tracking System</h2></div>
+			<div class = "panel-body">
+			<p>
+				<b>Video provides a powerful way to help you prove your point.
+					When you click Online Video, you can paste in the embed code for
+					the video you want to add. You can also type a keyword to search
+					online for the video that best fits your document.</b>
+			</p>
+			</div>
+		
+	</div>
+	</div>
+	<div class="col-lg-12">&nbsp;&nbsp;&nbsp;</div>
+	<div class="row">
+	<div class="col-lg-5">
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h4 class="panel-title">Close A Ticket</h4>
+			</div>
+			<div class="panel-body">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Tickets:">Ticket Id:</label>
+						<div class="col-sm-10">
+
+							<select id="ticketselection">
+								<option>Select</option> <% tickets.forEach(function(itr){
+								 %>
+								<option><%= itr %></option> <% } ); %>
+
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Employees:">Resolved By:</label>
+						<div class="col-sm-10">
+
+							<select id="closeempselection">
+								<option>Select</option> <% employees.forEach(function(itr){
+								 %>
+								<option><%= itr %></option> <% } ); %>
+
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+
+						<label class="control-label col-sm-2" for="Ticket Date/Time">Ticket
+							Closing Date/Time:</label>
+
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="txtCloseDateTime">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="resolution Desc">Ticket
+							Description</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="txtResoDesc"
+								placeholder="Resolution Desc">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-0 col-sm-10">
+							<button type="button" class="btn btn-success"
+								style="margin-left: 20px" id="closeTicket">Close A
+								Ticket</button>
+						</div>
+					</div>
+						</form>
+			</div>
+		
+		</div>
+	</div>
+	<div class="col-lg-7">
+		<div id="details"></div>
+	</div>
+	</div>

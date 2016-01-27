@@ -1,0 +1,81 @@
+<div class="row">
+	<div class="panel panel-info">
+		<div class="panel-heading" >
+			<h2 >Ticket Tracking System</h2></div>
+			<div class = "panel-body">
+			<p>
+				<b>Video provides a powerful way to help you prove your point.
+					When you click Online Video, you can paste in the embed code for
+					the video you want to add. You can also type a keyword to search
+					online for the video that best fits your document.</b>
+			</p>
+			</div>
+		
+	</div>
+	</div>
+	<div class="col-lg-12">&nbsp;&nbsp;&nbsp;</div>
+	<div class="row">
+	<div class="col-lg-5">
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h4 class="panel-title">Log A Ticket</h4>
+			</div>
+			<div class="panel-body">
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Employees:">Employees:</label>
+						<div class="col-sm-10">
+
+							<select id="empselection">
+								<option>Select</option> <% employees.forEach(function(itr){
+								 %>
+								<option><%= itr %></option> <% } ); %>
+
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+
+						<label class="control-label col-sm-2" for="Ticket Date/Time">Ticket
+							Date/Time:</label>
+
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="txtDateTime">
+						</div>
+					</div>
+
+					<div class="form-group">
+
+						<label class="control-label col-sm-2" for="Serverity">Serverity</label>
+
+						<div class="col-sm-10">
+							<input type="radio" name="choice" value="normal">Normal <br>
+							<input type="radio" name="choice" value="major">Major <br>
+							<input type="radio" name="choice" value="critical">Critical
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Ticket Desc">Ticket
+							Description</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="txtTicketDesc"
+								placeholder="Ticket Desc">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-0 col-sm-10">
+							<button type="button" class="btn btn-success"
+								style="margin-left: 20px" id="createTicket">Log A
+								Ticket</button>
+						</div>
+					</div>
+						</form>
+			</div>
+		
+		</div>
+	</div>
+	<div class="col-lg-7">
+		<div id="details"></div>
+	</div>
+	</div>
